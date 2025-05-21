@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Data Validation App");
 
-            Console.WriteLine();
+            Console.WriteLine("Goodbye!");
         }
     }
 }
