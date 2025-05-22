@@ -18,6 +18,7 @@
                 if (redo != 'y' && redo != 'Y' && redo != 'N' && redo != 'n')
                 {
                     Console.WriteLine("That is not a valid input, try again.");
+                    break;
                 } 
             } while (redo == 'y' || redo == 'Y');
             Console.WriteLine("Goodbye!");
