@@ -16,12 +16,14 @@
                 while(!double.TryParse(Console.ReadLine(), out length))
                 {
                     Console.WriteLine("Invalid format, please enter a number!");
+                    Console.Write("\nEnter Length: ");
                 }
                 
                 Console.Write("\nEnter Width: ");
                 while (!double.TryParse(Console.ReadLine(), out width))
                 {
                     Console.WriteLine("Invalid format, please enter a number!");
+                    Console.Write("\nEnter Width: ");
                 }
 
 
@@ -32,7 +34,7 @@
                     $"\nThe area of your rectangle is: {area}");
 
                 Console.Write("\n\nWould you like to go again? (y/n): ");
-                while (!char.TryParse(Console.ReadLine(), out redo) && redo != 'y' && redo != 'n')
+                while (!char.TryParse(Console.ReadLine(), out redo)/* && redo != 'y' && redo != 'n'*/)
                 {
                     Console.WriteLine("That is not a valid input, try again please.");
                 }
