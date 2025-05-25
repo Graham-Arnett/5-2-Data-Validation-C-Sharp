@@ -9,6 +9,7 @@
             //there isn't a straight up data validation project in the book, so I'm making a version of the perimeter calc with it
             double length = 0;
             double width = 0;
+            char[] acceptChars = {'y','Y','n','N'};
             do
             {
                 Console.Write("\nEnter Length: ");
@@ -34,15 +35,22 @@
                     $"\nThe area of your rectangle is: {area}");
 
                 Console.Write("\n\nWould you like to go again? (y/n): ");
-                while (!char.TryParse(Console.ReadLine(), out redo)/* && redo != 'y' && redo != 'n'*/)
+                redo = Console.ReadKey().KeyChar;
+                //while (!char.TryParse(Console.ReadLine(), out redo)/* && redo != 'y' && redo != 'n'*/)
+                //{
+                //    Console.WriteLine("That is not a valid input, try again please.");
+                //    Console.Write("\n\nWould you like to go again? (y/n): ");
+                //}
+                while (!acceptChars.Contains(redo))
                 {
                     Console.WriteLine("That is not a valid input, try again please.");
+                    Console.Write("\n\nWould you like to go again? (y/n): ");
                 }
                 //redo =Console.ReadKey().KeyChar;
                 //if (redo != 'y' && redo != 'Y' && redo != 'N' && redo != 'n')
                 //{
                 //    Console.WriteLine("\nThat is not a valid input, try again.");
-                    
+
                 //}
                 //else
                 //{
