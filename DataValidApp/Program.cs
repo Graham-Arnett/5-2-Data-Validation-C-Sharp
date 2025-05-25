@@ -10,6 +10,7 @@
             double length = 0;
             double width = 0;
             char[] acceptChars = {'y','Y','n','N'};
+            bool validChar = false;
             do
             {
                 Console.Write("\nEnter Length: ");
@@ -41,11 +42,21 @@
                 //    Console.WriteLine("That is not a valid input, try again please.");
                 //    Console.Write("\n\nWould you like to go again? (y/n): ");
                 //}
-                while (!acceptChars.Contains(redo))
-                {
-                    Console.WriteLine("That is not a valid input, try again please.");
-                    Console.Write("\n\nWould you like to go again? (y/n): ");
-                }
+                //while (!acceptChars.Contains(redo))
+                //{
+                //    Console.WriteLine("That is not a valid input, try again please.");
+                //    Console.Write("\n\nWould you like to go again? (y/n): ");
+                //}
+
+                //do
+                //{
+                //    Console.WriteLine("That is not a valid input, please try again.");
+                //    if (acceptChars.Contains(redo))
+                //    {
+                //        validChar = true;
+                //    }
+                //} while (!validChar);
+
                 //redo =Console.ReadKey().KeyChar;
                 //if (redo != 'y' && redo != 'Y' && redo != 'N' && redo != 'n')
                 //{
