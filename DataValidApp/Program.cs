@@ -35,8 +35,8 @@
                 Console.WriteLine($"\nThe perimeter of your rectangle is: {perimeter}" +
                     $"\nThe area of your rectangle is: {area}");
 
-                Console.Write("\n\nWould you like to go again? (y/n): ");
-                redo = Console.ReadKey().KeyChar;
+                //Console.Write("\n\nWould you like to go again? (y/n): ");
+                //redo = Console.ReadKey().KeyChar;
                 //while (!char.TryParse(Console.ReadLine(), out redo)/* && redo != 'y' && redo != 'n'*/)
                 //{
                 //    Console.WriteLine("That is not a valid input, try again please.");
@@ -57,6 +57,21 @@
                 //    }
                 //} while (!validChar);
 
+                do
+                {
+                    Console.Write("\nWould you like to go again? (y/n): ");
+                    redo = Console.ReadKey().KeyChar;
+                    if (acceptChars.Contains(redo))
+                    {
+                        validChar = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nThat was not a valid input, please try again.");
+                        validChar =false ;
+                    }
+                } while (!validChar);
+
                 //redo =Console.ReadKey().KeyChar;
                 //if (redo != 'y' && redo != 'Y' && redo != 'N' && redo != 'n')
                 //{
@@ -68,7 +83,7 @@
 
                 //}
             } while (redo == 'y' || redo == 'Y');
-            Console.WriteLine("Goodbye!");
+            Console.WriteLine("\n\nGoodbye!");
         }
     }
 }
