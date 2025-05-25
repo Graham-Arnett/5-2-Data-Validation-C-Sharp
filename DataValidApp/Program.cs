@@ -14,7 +14,7 @@
             do
             {
                 Console.Write("\nEnter Length: ");
-                //double length = double.Parse(Console.ReadLine());
+    
                 while(!double.TryParse(Console.ReadLine(), out length))
                 {
                     Console.WriteLine("Invalid format, please enter a number!");
@@ -35,28 +35,7 @@
                 Console.WriteLine($"\nThe perimeter of your rectangle is: {perimeter}" +
                     $"\nThe area of your rectangle is: {area}");
 
-                //Console.Write("\n\nWould you like to go again? (y/n): ");
-                //redo = Console.ReadKey().KeyChar;
-                //while (!char.TryParse(Console.ReadLine(), out redo)/* && redo != 'y' && redo != 'n'*/)
-                //{
-                //    Console.WriteLine("That is not a valid input, try again please.");
-                //    Console.Write("\n\nWould you like to go again? (y/n): ");
-                //}
-                //while (!acceptChars.Contains(redo))
-                //{
-                //    Console.WriteLine("That is not a valid input, try again please.");
-                //    Console.Write("\n\nWould you like to go again? (y/n): ");
-                //}
-
-                //do
-                //{
-                //    Console.WriteLine("That is not a valid input, please try again.");
-                //    if (acceptChars.Contains(redo))
-                //    {
-                //        validChar = true;
-                //    }
-                //} while (!validChar);
-
+                
                 do
                 {
                     Console.Write("\nWould you like to go again? (y/n): ");
@@ -72,16 +51,6 @@
                     }
                 } while (!validChar);
 
-                //redo =Console.ReadKey().KeyChar;
-                //if (redo != 'y' && redo != 'Y' && redo != 'N' && redo != 'n')
-                //{
-                //    Console.WriteLine("\nThat is not a valid input, try again.");
-
-                //}
-                //else
-                //{
-
-                //}
             } while (redo == 'y' || redo == 'Y');
             Console.WriteLine("\n\nGoodbye!");
         }
